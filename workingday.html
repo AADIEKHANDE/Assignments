@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: auto;
+            position: absolute;
+            padding: 20px;
+            box-shadow: 0 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" name="number" id="number" placeholder="Enter Day" autocomplete="off">
+        <br>
+        <br>
+        <button onclick="days()">Submit</button>
+        <br>
+        <br>
+        <input type="text" name="output" id="output" placeholder="Output" readonly>
+        <br>
+        <input type="text" name="output" id="output2" placeholder="Output2" readonly>
+        
+    </div>
+</body>
+</html>
+<script>
+    function days()
+    {
+        var a=parseInt(document.getElementById('number').value);
+        var x=document.getElementById('output');
+        var y=document.getElementById('output2');
+
+        switch(a) 
+        {
+            case 1 : x.value="Monday"; 
+
+            case 2 : x.value="Tuesday"; 
+
+            case 3 : x.value="Wednesday"; 
+
+            case 4 : x.value="Thusrsday"; 
+
+            case 5 : x.value="Friday"; y.value="Working day";
+            break;
+
+            case 6 : x.value="Saturday"; 
+
+            case 7 : x.value="Sunday"; y.value="Non Working day";
+            break;
+
+        }
+        
+    }
+</script>
