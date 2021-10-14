@@ -12,19 +12,20 @@
 </html>
 <script type="text/javascript">
     
-    var emp={e1:{'name':'XYZ','age':36},e2:{'name':'PQR','age':56},e3:{'name':ABC,'age':18}};
+    var emp={e1:{'name':'XYZ','age':36},e2:{'name':'PQR','age':56},e3:{'name':'ABC','age':18}};
 
-    if(emp["e1"]["age"]>emp["e2"]["age"] && emp["e1"]["age"]>emp["e3"]["age"])
+    if(emp["e1"]["age"]<emp["e2"]["age"] && emp["e1"]["age"]<emp["e3"]["age"])
     {
-        document.writeln("Youngest Employee is"+e["emp1"]["name"]);
+        document.writeln("Youngest Employee is "+emp["e1"]["name"]);
     }
-    else if(emp["e2"]["age"]>emp["e1"]["age"] && emp["e2"]["age"]>emp["e3"]["age"])
+    else if(emp["e2"]["age"]<emp["e1"]["age"] && emp["e2"]["age"]<emp["e3"]["age"])
     {
-        document.writeln("Youngest Employee is"+emp["emp1"]["name"]);
+        document.writeln("Youngest Employee is "+emp["e2"]["name"]);
     }
-    else
+    else if(emp["e3"]["age"]<emp["e1"]["age"] && emp["e3"]["age"]<emp["e2"]["age"])
     {
-        document.writeln("Youngest Employee is"+emp["emp1"]["name"]);
+        document.writeln("Youngest Employee is "+emp["e3"]["name"]);
     }
+    
 
 </script>
